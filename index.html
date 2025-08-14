@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Textbook Hub</title>
+  <title>Ignitia Bot</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #121212;
+      background: linear-gradient(135deg, #ff00cc, #333399, #00c9ff);
       color: #e0e0e0;
     }
     header {
-      background-color: #1f1f1f;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       padding: 20px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.4);
@@ -66,58 +66,53 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #1f1f1f;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
       margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Smart Textbook Hub</h1>
-    <nav>
-      <a href="#classes">Classes</a>
-      <a href="#chatbot">Ask the Bot</a>
-      <a href="#about">About Me</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Welcome to Harshini’s Textbook Hub</h2>
-    <p>All your school textbooks in one smart place. Browse, click, ask!</p>
-  </section>
+<header>
+  <h1>Ignitia Bot</h1>
+  <nav>
+    <a href="#classes">Classes</a>
+    <a href="#chatbot">Ask the Bot</a>
+    <a href="#about">About Us</a>
+  </nav>
+</header>
 
-  <section id="classes" class="subjects">
-    <div class="card" onclick="showGroups('10')">10th Standard</div>
-    <div class="card" onclick="showGroups('11')">11th Standard</div>
-    <div class="card" onclick="showGroups('12')">12th Standard</div>
-  </section>
+<section class="hero">
+  <h2>Welcome to Ignitia bot</h2>
+  <p>All your school textbooks in one smart place. Browse, click, ask!</p>
+</section>
 
-  <section id="group-section" class="subjects" style="display: none;"></section>
-  <section id="subject-section" class="subjects" style="display: none;"></section>
+<section id="classes" class="subjects">
+  <div class="card" onclick="showGroups('10')">10th Standard</div>
+  <div class="card" onclick="showGroups('11')">11th Standard</div>
+  <div class="card" onclick="showGroups('12')">12th Standard</div>
+  <div class="card" onclick="showGroups('aptitude')">Aptitude</div>
+</section>
 
-  <div id="subject-description" class="description"></div>
+<section id="group-section" class="subjects" style="display: none;"></section>
+<section id="subject-section" class="subjects" style="display: none;"></section>
+<div id="subject-description" class="description"></div>
 
-  <section id="chatbot" class="hero">
-    <h2>Ask the Bot</h2>
-    <p>The bot will give you the textbook link when you select the subject!!</p>
-    <p>Type your subject-related question below. The bot will help you!</p>
-  </section>
+<section id="chatbot" class="hero">
+  <h2>Ask the Bot</h2>
+  <p>The bot will give you the textbook link when you select the subject!!</p>
+  <p>Type your subject-related question below. The bot will help you!</p>
+</section>
 
-  <!-- Chatling Chatbot -->
-  <script>
-    window.chtlConfig = {
-      chatbotId: "1314857164"
-    }
-  </script>
-  <script async data-id="1314857164" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-  <script>
+<!-- Chatling Chatbot -->
+<script>
+  window.chtlConfig = { chatbotId: "1314857164" };
+</script>
+<script async data-id="1314857164" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+<script>
   function askAI(message) {
     alert("You can ask the chatbot:\n\n" + message);
-
-    // Scroll to chatbot section (optional)
     document.getElementById("chatbot").scrollIntoView({ behavior: 'smooth' });
-
-    // Wait until Chatling widget is ready, then open it
     const interval = setInterval(() => {
       if (window.Chatling && typeof window.Chatling.open === 'function') {
         window.Chatling.open();
@@ -127,113 +122,133 @@
   }
 </script>
 
-  <section id="about" class="hero">
-    <h2>About Me</h2>
-    <p>I’m Harshini S, a passionate student from Chennai Institute of Technology, sharing school textbooks and helping others learn smarter!</p>
-  </section>
+<section id="about" class="hero">
+  <h2>About Us</h2>
+  <p>Welcome to Smart Education Bot — your intelligent companion on the journey of learning! Our mission is to make education accessible, engaging, and personalized for every learner...</p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Smart Textbook Hub. Built by Harshini S.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Ignitia Bot!!!</p>
+</footer>
 
-  <script>
-    const groupData = {
-      '10': {
-        '10th Subjects': ['Tamil', 'English', 'Maths', 'Science', 'Social Science']
-      },
-      '11': {
-        'Biology Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Biology', 'Maths'],
-        'Computer Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Computer Science', 'Maths'],
-        'Pure Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Botany', 'Zoology'],
-        'Commerce Group': ['Tamil', 'English', 'Commerce', 'Accountancy', 'Business Maths', 'Economics']
-      },
-      '12': {
-        'Biology Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Biology', 'Maths'],
-        'Computer Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Computer Science', 'Maths'],
-        'Pure Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Botany', 'Zoology'],
-        'Commerce Group': ['Tamil', 'English', 'Commerce', 'Accountancy', 'Business Maths', 'Economics']
-      }
-    };
+<script>
+  
+  
 
-    const subjectDescriptions = {
-      'Physics': 'Physics explores the laws of nature, covering topics like motion, electricity, and light.',
-      'Chemistry': 'Chemistry is the study of substances and their properties, reactions, and structures.',
-      'Biology': 'Biology focuses on living organisms, their functions, and their interactions.',
-      'Maths': 'Mathematics builds problem-solving skills through algebra, geometry, and calculus.',
-      'Computer Science': 'Computer Science introduces programming, algorithms, and computational thinking.',
-      'Botany': 'Botany is the scientific study of plants, their structure, growth, and classification.',
-      'Zoology': 'Zoology deals with the biology of animals including classification and physiology.',
-      'Commerce': 'Commerce gives an understanding of trade, business operations, and market structure.',
-      'Accountancy': 'Accountancy teaches how to maintain financial records and interpret statements.',
-      'Business Maths': 'Business Maths applies mathematical methods to business and finance problems.',
-      'Economics': 'Economics studies the production, distribution, and consumption of goods and services.',
-      'Tamil': 'Tamil enhances your language skills, literature understanding, and cultural knowledge.',
-      'English': 'English improves grammar, comprehension, and literary appreciation.',
-      'Social Science': 'Social Science explores history, geography, political science, and economics.',
-      'Science': 'Science in 10th standard covers basic physics, chemistry, and biology concepts.'
-    };
-
-    const aiQuestions = {
-      'Physics': "Explain Newton's laws with examples.",
-      'Chemistry': "What are types of chemical reactions?",
-      'Biology': "What is the function of the human digestive system?",
-      'Maths': "How do I solve quadratic equations?",
-      'Computer Science': "What is an algorithm with example?",
-      'Botany': "What are types of plant tissues?",
-      'Zoology': "Explain the classification of vertebrates.",
-      'Commerce': "What is the concept of trade?",
-      'Accountancy': "Explain double entry system.",
-      'Business Maths': "What is simple interest and compound interest?",
-      'Economics': "What is demand and supply?",
-      'Tamil': "Explain Alagiya Tamil characteristics.",
-      'English': "Summarize the poem ‘The Road Not Taken’.",
-      'Social Science': "Explain the French Revolution.",
-      'Science': "What are acids, bases and salts?"
-    };
-
-    function showGroups(className) {
-      document.getElementById('group-section').innerHTML = '';
-      document.getElementById('subject-section').style.display = 'none';
-      document.getElementById('subject-description').style.display = 'none';
-
-      const groups = groupData[className];
-      const groupSection = document.getElementById('group-section');
-
-      for (let group in groups) {
-        const btn = document.createElement('div');
-        btn.className = 'card';
-        btn.innerText = group;
-        btn.onclick = () => showSubjects(className, group);
-        groupSection.appendChild(btn);
-      }
-      groupSection.style.display = 'grid';
+  const groupData = {
+    '10': {
+      '10th Subjects': ['Tamil', 'English', 'Maths', 'Science', 'Social Science']
+    },
+    '11': {
+      'Biology Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Biology', 'Maths'],
+      'Computer Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Computer Science', 'Maths'],
+      'Pure Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Botany', 'Zoology'],
+      'Commerce Group': ['Tamil', 'English', 'Commerce', 'Accountancy', 'Business Maths', 'Economics']
+    },
+    '12': {
+      'Biology Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Biology', 'Maths'],
+      'Computer Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Computer Science', 'Maths'],
+      'Pure Science Group': ['Tamil', 'English', 'Physics', 'Chemistry', 'Botany', 'Zoology'],
+      'Commerce Group': ['Tamil', 'English', 'Commerce', 'Accountancy', 'Business Maths', 'Economics']
+    },
+    'aptitude': {
+      'Aptitude Topics': ['Number Series', 'Time and Work', 'Profit and Loss', 'Percentages', 'Simplification']
     }
+  };
 
-    function showSubjects(className, groupName) {
-      const subjects = groupData[className][groupName];
-      const subjectSection = document.getElementById('subject-section');
-      subjectSection.innerHTML = '';
+  const subjectDescriptions = {
+    'Physics': 'Physics explores the laws of nature...',
+    'Chemistry': 'Chemistry is the study...',
+    'Biology': 'Biology focuses on living organisms...',
+    'Maths': 'Mathematics builds problem-solving skills...',
+    'Computer Science': 'Computer Science introduces programming...',
+    'Botany': 'Botany is the scientific study of plants...',
+    'Zoology': 'Zoology deals with the biology of animals...',
+    'Commerce': 'Commerce gives an understanding of trade...',
+    'Accountancy': 'Accountancy teaches how to maintain financial records...',
+    'Business Maths': 'Business Maths applies mathematics to business...',
+    'Economics': 'Economics studies production, distribution, and consumption...',
+    'Tamil': 'Tamil enhances your language skills...',
+    'English': 'English improves grammar and comprehension...',
+    'Social Science': 'Social Science explores history and geography...',
+    'Science': 'Science in 10th standard covers basic concepts...',
+    'Number Series': 'Identify number sequence patterns...',
+    'Time and Work': 'Problems on work efficiency...',
+    'Profit and Loss': 'Calculate selling and cost price margins...',
+    'Percentages': 'Understand ratios in terms of 100...',
+    'Simplification': 'Quickly solve numerical BODMAS expressions...'
+  };
 
-      subjects.forEach(subject => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerText = subject;
-        card.onclick = () => showSubjectDetails(subject);
-        subjectSection.appendChild(card);
-      });
-      subjectSection.style.display = 'grid';
-      document.getElementById('subject-description').style.display = 'none';
+  const aiQuestions = {
+    'Physics': "Explain Newton's laws with examples.",
+    'Chemistry': "What are types of chemical reactions?",
+    'Biology': "What is the function of the human digestive system?",
+    'Maths': "How do I solve quadratic equations?",
+    'Computer Science': "What is an algorithm with example?",
+    'Botany': "What are types of plant tissues?",
+    'Zoology': "Explain the classification of vertebrates.",
+    'Commerce': "What is the concept of trade?",
+    'Accountancy': "Explain double entry system.",
+    'Business Maths': "What is simple interest and compound interest?",
+    'Economics': "What is demand and supply?",
+    'Tamil': "Explain Alagiya Tamil characteristics.",
+    'English': "Summarize the poem ‘The Road Not Taken’.",
+    'Social Science': "Explain the French Revolution.",
+    'Science': "What are acids, bases and salts?",
+    'Number Series': 'What is the next number after 2, 4, 8, 16?',
+    'Time and Work': 'If A can do work in 6 days, B in 8 days, how long together?',
+    'Profit and Loss': 'Calculate profit percentage from selling and cost price.',
+    'Percentages': 'How to find percentage increase or decrease?',
+    'Simplification': 'Solve: 24 + 36 ÷ 6 × 3'
+  };
+
+  function showGroups(className) {
+    document.getElementById('group-section').innerHTML = '';
+    document.getElementById('subject-section').style.display = 'none';
+    document.getElementById('subject-description').style.display = 'none';
+
+    const groups = groupData[className];
+    const groupSection = document.getElementById('group-section');
+    for (let group in groups) {
+      const btn = document.createElement('div');
+      btn.className = 'card';
+      btn.innerText = group;
+      btn.onclick = () => showSubjects(className, group);
+      groupSection.appendChild(btn);
     }
+    groupSection.style.display = 'grid';
+  }
 
-    function showSubjectDetails(subject) {
-      const desc = subjectDescriptions[subject] || 'Description not available.';
-      const question = aiQuestions[subject] || 'Ask a question about this subject.';
-      const descBox = document.getElementById('subject-description');
-      descBox.innerHTML = `<h3>${subject}</h3><p>${desc}</p><button class="ask-ai-btn" onclick="askAI('${question}')">Ask AI</button>`;
-      descBox.style.display = 'block';
-    }
+  function showSubjects(className, groupName) {
+    const subjects = groupData[className][groupName];
+    const subjectSection = document.getElementById('subject-section');
+    subjectSection.innerHTML = '';
+    subjects.forEach(subject => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerText = subject;
+      card.onclick = () => showSubjectDetails(subject);
+      subjectSection.appendChild(card);
+    });
+    subjectSection.style.display = 'grid';
+    document.getElementById('subject-description').style.display = 'none';
+  }
 
-    
-  </script>
+  function showSubjectDetails(subject) {
+    const desc = subjectDescriptions[subject] || 'Description not available.';
+    const question = aiQuestions[subject] || 'Ask about this subject.';
+    const descBox = document.getElementById('subject-description');
+    descBox.innerHTML = `
+      <h3>${subject}</h3>
+      <p>${desc}</p>
+      <button class="ask-ai-btn" onclick="askAI('${question}')">Ask AI</button>
+    `;
+    descBox.style.display = 'block';
+  }
+</script>
+
 </body>
 </html>
+</body>
+</html>
+
